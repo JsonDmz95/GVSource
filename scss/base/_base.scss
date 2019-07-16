@@ -1,0 +1,100 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+body{
+    background-color: $body-color;
+    font-family: $primary-font;
+    font-style: normal;
+    font-size: 18px;
+    color: $text-color;
+
+    overflow: hidden;
+
+    #site-preloader {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 2000;
+        background-color: white;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        opacity: 1;
+        transition: all 0.5s ease;
+
+        img{
+            -webkit-animation: imageOpacity 3s ease-in infinite;
+            animation: imageOpacity 3s ease-in infinite;
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    color: $primary-color;
+    text-transform: none;
+    line-height: 1.3;
+    font-family: $secondary-font;
+    font-weight: 800;
+}
+
+// *** Selection behavior ***
+
+::selection{
+    background: $primary-color;
+    color: $white;
+}
+
+::-moz-selection{
+    background: $primary-color;
+    color: $white;
+}
+
+// *** END OF Selection behavior ****
+
+// Main titles
+h1, .internals-titles{
+    text-transform: uppercase;
+}
+
+p{
+    color: $text-color;
+    word-wrap: break-word;
+    line-height: 1.35;
+    margin-bottom: 24px;
+}
+
+// Basic styles for links
+a{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: $third-color;
+    text-decoration: none;
+    line-height: 1.3;
+
+    @include on-event{
+        text-decoration: underline;
+        color: $hover-color;
+    }
+}
+
+@media (min-width: 768px) {
+    h1{
+    }
+}

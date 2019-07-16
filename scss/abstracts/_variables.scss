@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+///font-variables
+$primary-font: 'Montserrat', times, sans-serif;
+$secondary-font: 'Raleway', times, sans-serif;
+
+/// Copy text color
+/// @type Color
+$text-color: #555555 !default;
+
+//color on variables
+$white: #fff;
+$black: #000;
+$grey: #e8eaeb;
+$grey-divider: #ccc;
+$wrongurl-color: #eee;
+
+// *** External Vendor Design ***
+// $grey-divider: #eaeaea;
+// *** End External Vendor Design ***
+$teal: #15B5B4;
+$red: #FB3126;
+$blue: #4372B8;
+// Company color pallete
+$primary-color: $teal; //teal
+$secondary-color: $red; //red
+$third-color: $blue; //blue
+$fourth-color: $primary-color;
+$btn-color: $third-color;
+$hover-color: $secondary-color;
+$facets-color: $secondary-color;
+$facets-title: $primary-color;
+$internals-links: $hover-color;
+$body-color: $white;
+
+/// For rounded facets
+$rounded-facet: false;
+/// End For rounded facets
+
+/// For full facets
+$full-facet: false;
+/// End For full facets
+
+/// For search box (Label inline)
+$label-inline: false;
+/// End For search box (Label inline)
+
+/// For search small (similar as the mobile search)
+$search-small: false;
+/// End For search small (similar as the mobile search)
+
+/// For search small (similar as the mobile search)
+$external-design: false;
+/// End For search small (similar as the mobile search)
+
+/// Container's maximum width
+/// @type Length
+/// $max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop{String} keys - Keys are identifiers mapped to a given length
+/// @prop{Map} values - Values are actual breakpoints expressed in pixels
+//// $breakpoints: (
+///   'small': 320px,
+///   'medium': 768px,
+///   'large': 1024px,
+//// ) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

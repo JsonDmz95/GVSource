@@ -1,0 +1,293 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+//
+// Clear inner floats
+//
+.clearfix::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+
+//
+// Hide text while making it readable for screen readers
+// 1. Needed in WebKit-based browsers because of an implementation bug;
+// See: https://code.google.com/p/chromium/issues/detail?id=457146
+//
+.hide-text{
+    overflow: hidden;
+    padding: 0;
+    /* 1 */
+    text-indent: 101%;
+    white-space: nowrap;
+}
+
+//
+// Hide element while making it readable for screen readers
+// Shamelessly borrowed from HTML5Boilerplate:
+// https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+//
+.visually-hidden{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Custom-helpers
+.text-white{
+    color: $white;
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+.full-wd{
+    width: 100%;
+}
+
+.no-margin{
+    margin: 0px !important;
+}
+
+.no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+// Center link inside
+.link-center{
+    text-align: center;
+}
+
+// End Center link inside
+// Visible only on 4K
+.visible-4k{
+    display: none !important;
+}
+
+// End Visible only on 4K
+// Featured pages Jobs section
+.featured-jobs{
+    padding-bottom: 50px;
+}
+
+// End Featured pages Jobs section
+// No break words
+.no-break{
+    white-space: nowrap;
+}
+
+// End No break words
+// Hide "Not Ready To Apply" section on the Join Form page and After Apply page
+.hide-not-ready + .not-ready,
+.hide-not-ready + style + .not-ready,
+.hide-not-ready + footer > .not-ready,
+.hide-not-ready + style + footer > .not-ready{
+    display: none;
+}
+
+// End Hide "Not Ready To Apply" section on the Join Form page and After Apply page
+// Center images
+img{
+    margin: 0 auto;
+}
+
+// End Center images
+// Videos Full Width
+video{
+    width: 100%;
+}
+
+// End Videos Full Width
+.aligned-text{
+    text-align: center;
+}
+
+ul.aligned-list{
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+
+    li{
+        margin-bottom: 20px;
+    }
+}
+
+:lang(en-US) body{
+    .hidden-en{
+        display: none;
+    }
+}
+
+.default-section{
+    padding: 30px 0px;
+}
+
+.section-title{
+    color: $text-color;
+    margin-top: 0px;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.teal-bg{
+    background-color: $teal;
+
+    .section-title{
+        color: $white;
+    }
+    p, ul{
+        color: $white;
+        margin-bottom: 20px;
+    }
+
+    ::-moz-selection{
+        background: $red;
+        color: $white;
+    }
+
+    ::selection{
+        background: $red;
+        color: $white;
+    }
+
+    ::-moz-selection{
+        background: $red;
+        color: $white;
+    }
+}
+
+.white-bg{
+    &+.white-bg{
+        padding-top: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    // Featured pages Jobs section
+    .featured-jobs{
+        padding-bottom: 100px;
+    } // End Featured pages Jobs section
+    .aligned-text{
+        text-align: left;
+    }
+
+    ul.aligned-list{
+        padding-left: 30px;
+        list-style: none;
+        text-align: left;
+
+        li{
+            position: relative;
+
+            &::before{
+                content: '';
+                display: block;
+                height: 16px;
+                width: 16px;
+                background-color: transparent;
+                background-image: url("../img/bullet.svg");
+                position: absolute;
+                left: -24px;
+                right: auto;
+                top: 3.5px;
+                bottom: auto;
+            }
+        }
+    }
+
+    .default-section{
+        padding: 60px 0px;
+    }
+
+    .section-title{
+        font-size: 80px;
+        margin-bottom: 40px;
+    }
+
+    .teal-bg{
+        ul.aligned-list li{
+            &::before{
+                background-image: url("../img/bullet-white.svg");
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1920px) {
+
+    // Hide on 4K
+    .hidden-4k{
+        background: none !important;
+        height: auto !important;
+    } // Hide on 4K
+    // Visible only on 4K
+    .visible-4k{
+        display: block !important;
+    } // End Visible only on 4K
+}
+
+@-webkit-keyframes animationRight{
+    from{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50%{
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    to{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes animationRight{
+    from{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50%{
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    to{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes imageOpacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes imageOpacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

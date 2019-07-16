@@ -1,0 +1,834 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.landing-banner{
+    height: 450px; // -> Always
+    position: relative;
+    background-color: $black;
+    background-image: url("../img/banner-mobile.png");
+    background-size: cover;
+    background-position: top right 40%;
+
+    .btn-container{
+        margin-top: 10px;
+        .primary-button{
+            width: 190px;
+        }
+    }
+
+    &.legal-banner{
+        background-image: url("../img/legal-banner-mobile.png");
+    }
+}
+
+.landing-text-content{
+    padding-top: 150px;
+    -webkit-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.landing-text{
+    color: $white;
+    font-size: 18px;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+    span{
+        display: block;
+    }
+
+    .big{
+        font-size: 40px;
+        font-weight: 800;
+        padding-top: 10px;
+        position: relative;
+
+        &.lines{
+            &:before, &:after{
+                content: '';
+                width: 30px;
+                height: 2px;
+                background: $white;
+                display: block;
+                position: absolute;
+                top: 50%;
+            }
+            &::before{
+                left: calc(50% - 140px);
+                right: auto;
+            }
+
+            &::after{
+                left: auto;
+                right: calc(50% - 140px);
+            }
+        }
+    }
+}
+
+.locations-parent{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 30px;
+
+    .location-child{
+        margin-bottom: 30px;
+
+        h3{
+            margin-top: 0px;
+            margin-bottom: 20px;
+            color: $text-color;
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+.about-us{
+    .card{
+        -webkit-box-shadow: 0 6px 38px #b8b6b3;
+        box-shadow: 0 6px 38px #b8b6b3;
+        padding: 30px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+
+        .icon{
+            background: $fourth-color;
+            display: inline-block;
+            border-radius: 100%;
+            height: 75px;
+            width: 75px;
+            margin-left: auto;
+            margin-right: auto;
+
+            display: -webkit-box;
+
+            display: -ms-flexbox;
+
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            &#who{
+                background: $red;
+            }
+
+            &#mission{
+                background: $blue;
+            }
+
+
+            i{
+                color: $white;
+                font-size: 45px;
+            }
+        }
+
+        .card-title{
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: $text-color;
+            // font-family: $primary-font;
+        }
+
+        p{
+            line-height: 30px;
+
+            b{
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.half-section{
+    padding-bottom: 400px;
+    position: relative;
+    .title-container{
+        background: $white;
+        padding: 15px 30px 5px 30px;
+        margin-bottom: 30px;
+
+        h2{
+            color: $teal;
+            margin: 0px;
+        }
+
+        img{
+            height: 30px;
+            // float: right;
+        }
+    }
+
+    .text-content{
+        strong{
+            font-weight: 600;
+        }
+        ul.aligned-list li{
+            margin-bottom: 15px;
+        }
+    }
+
+    a{
+        color: $white;
+
+        @include on-event{
+            color: $white;
+        }
+    }
+
+    .half-img-container{
+        height: 380px;
+        width: 100%;
+        background-color: $grey;
+        background-image: url("../img/our-team.png");
+        background-position: center right 7%;
+        background-size: cover;
+        position: absolute;
+        bottom: 0px;
+        top: auto;
+        left: 0px;
+        right: 0px;
+    }
+
+    &.process-1{
+        .half-img-container{
+            background-image: url("../img/process-1.png");
+            background-position: top center;
+        }
+    }
+
+    &.process-2{
+        .half-img-container{
+            background-image: url("../img/process-2.png");
+            background-position: top left 25%;
+        }
+    }
+}
+
+.what-we-do{
+    .text-content p{
+        letter-spacing: -0.2px;
+    }
+
+    .what-flex-parent{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+
+        .what-flex-child{
+            position: relative;
+            height: 230px;
+            width: 267px;
+            -webkit-box-shadow: 0px 6px 18px #B8B6B3;
+            box-shadow: 0px 6px 18px #B8B6B3;
+            margin-bottom: 40px;
+
+            img{
+                margin-top: 20px;
+            }
+
+            span{
+                display: block;
+                width: 100%;
+                position: absolute;
+                bottom: 15px;
+                top: auto;
+                font-size: 16px;
+                padding: 0px 16px;
+                color: $white
+            }
+
+            &.blue{
+                background: #01C6DA;
+            }
+            &.red{
+                background: #FF876C;
+            }
+            &.white{
+                background: #F1FAFC;
+                span{
+                    color: $text-color;
+                }
+            }
+            &.black{
+                background: #30363D;
+            }
+            &.green{
+                background: #82CF8F;
+            }
+
+            &.pci{
+                span{
+                    bottom: 45px;
+                }
+            }
+        }
+    }
+}
+
+.services{
+    .section-title{
+        margin-bottom: 40px;
+        position: relative;
+        &:after{
+            content: '';
+            height: 30px;
+            width: 179px;
+            background-image: url("../img/service-decoration.png");
+            background-size: cover;
+            position: absolute;
+            bottom: -20px;
+            top: auto;
+            left: calc(50% - 89.5px);
+        }
+    }
+    p{
+        margin-bottom: 20px;
+    }
+    ul.aligned-list{
+        li{
+            letter-spacing: letter-spacing(-40, 18px);
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.industry{
+    .industry-card{
+        max-width: 360px;
+        margin: 0px auto 30px auto;
+        -webkit-box-shadow: 0px 6px 18px #B8B6B3;
+        box-shadow: 0px 6px 18px #B8B6B3;
+        position: relative;
+
+        .text-content{
+            padding: 25px 20px 40px 20px;
+        }
+
+        h3{
+            margin-top: 0px;
+            margin-bottom: 20px;
+            color: $text-color;
+        }
+
+        &::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 6px;
+            position: absolute;
+            bottom: 0px;
+            top: auto;
+            left: 0px;
+            right: 0px;
+        }
+
+        &.teal{
+            &::after{
+                background: $teal;
+            }
+        }
+        &.red{
+            &::after{
+                background: $red;
+            }
+        }
+        &.blue{
+            &::after{
+                background: $blue;
+            }
+        }
+    }
+}
+
+
+.contact-form{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    textarea {
+        resize: none;
+    }
+
+    // Inputs
+    .form-control{
+        border-radius: 0px;
+        border: none;
+        color: $text-color;
+        font-size: 16px;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        height: 40px;
+
+        &.text-area{
+            margin-top: 30px;
+            height: 100px;
+
+            +grammarly-btn, &{
+                +label{
+                    bottom: 100px;
+
+                    + .border-bottom{
+                        &:after{
+                        }
+                    }
+                }
+            }
+
+            @include on-event{
+                +grammarly-btn{
+                    +label{
+                        + .border-bottom{
+                            &:after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include on-event{
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        &:focus{
+            border-bottom-color: #ddd;
+        }
+    }
+    // End Inputs
+
+    // Material inputs
+    .form-group{
+        position: relative;
+        padding-top: 30px;
+        width: 100%;
+
+        label{
+            position: absolute;
+            bottom: 6px;
+            top: auto;
+            left: auto;
+            right: auto;
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+            span{
+                color: #ad0000;
+            }
+        }
+
+        .border-bottom{
+            position: relative;
+
+            &:after{
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                top: auto;
+                left: 0px;
+                right: auto;
+                width: 0px;
+                height: 2px;
+
+                -webkit-box-shadow: 0 1px 0 0 $primary-color;
+                box-shadow: 0 1px 0 0 $primary-color;
+                border-bottom: 1px solid $primary-color;
+
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+        }
+
+        input{
+            position: relative;
+            z-index: 100;
+
+            &.with-value, &:valid, &:focus{
+                + label{
+                    -webkit-transform: translateY(-30px);
+                    transform: translateY(-30px);
+                    font-size: 14px;
+
+                    + .border-bottom{
+                        &:after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End Material inputs
+
+    .main-button{
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+
+        .primary-button{
+            width: 170px;
+        }
+    }
+}
+
+.contact-us{
+    .img-container{
+        padding-top: 150px;
+    }
+}
+
+.legal-content{
+    a{
+        color: $blue;
+
+        @include on-event{
+            color: $blue;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .landing-banner{
+        height: 750px;
+        background-image: url("../img/banner.png");
+
+        &.legal-banner{
+            height: 500px !important;
+            background-image: url("../img/legal-banner.png");
+            background-attachment: inherit !important;
+        }
+    }
+
+    // .content-banner{
+    //   background: url("../img/content-banner.png") no-repeat center center;
+    //   background-size: cover;
+    //   height: 320px;
+    //   position: relative;
+    // }
+
+    .landing-text{
+
+        font-size: 20px;
+        line-height: 24px;
+
+
+        span{
+            padding-bottom: 30px;
+        }
+
+        .big{
+            font-size: 80px;
+            line-height: 94px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            // lin
+            position: relative;
+
+            &.lines{
+
+                &::before{
+                    left: calc(50% - 265px);
+                }
+
+                &::after{
+                    right: calc(50% - 265px);
+                }
+            }
+        }
+    }
+
+    .worldwide{
+        .map{
+            float: right;
+            max-width: 50%;
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .locations-parent{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding-top: 30px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        .location-child{
+            margin-bottom: 50px;
+            +.location-child{
+                padding-left: 60px;
+            }
+
+            &:last-child{
+                // margin-bottom: 0px;
+            }
+        }
+    }
+
+    .about-us .card{
+        min-height: 538px;
+        margin-bottom: 0px;
+    }
+
+    .half-section{
+        padding-bottom: 40px;
+        .title-container{
+            background: $white;
+            padding: 13px 60px;
+            margin-bottom: 40px;
+            width: 90%;
+            max-width: 797px;
+            position: relative;
+
+            img{
+                height: auto;
+                position: absolute;
+                bottom: 12px;
+                top: auto;
+                right: -90px;
+                left: auto;
+            }
+        }
+
+        .text-content{
+            ul.aligned-list {
+                margin-bottom: 0px;
+                li{
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+
+        .half-img-container{
+            height: 100%;
+            width: 50%;
+            top: 0px;
+            left: 50%;
+            right: 0px;
+            background-attachment: fixed;
+            background-position: center right 15%;
+        }
+
+        &.process-1{
+            .half-img-container{
+                background-image: url("../img/process-1.png");
+                background-position: top left 23%;
+                background-attachment: inherit;
+            }
+        }
+
+        &.process-2{
+            .half-img-container{
+                background-image: url("../img/process-2.png");
+                background-position: top left 43%;
+                background-attachment: inherit;
+            }
+        }
+
+
+    }
+
+    .what-we-do{
+        .what-flex-parent{
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding-top: 50px;
+        }
+    }
+
+    .services{
+        .section-title{
+            margin-bottom: 60px;
+
+            &:after{
+                content: '';
+                height: 57px;
+                width: 358px;
+                bottom: -35px;
+                left: 0px;
+            }
+        }
+    }
+
+    .industry{
+        .industry-card{
+            min-height: 870px;
+        }
+    }
+
+    .contact-form{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        .form-group{
+            &.half{
+                width: calc(50% - 15px);
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 992px) {
+    .landing-banner{
+        height: 100vh;
+        background-attachment: fixed;
+    }
+
+    .landing-text-content{
+        padding-top: 285px;
+    }
+
+    .welcome{
+        .section-title{
+            padding-top: 105px;
+        }
+    }
+
+    .locations-parent{
+        padding-top: 50px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+    }
+
+    .about-us .card{
+        min-height: 478px;
+    }
+
+    .services{
+        position: relative;
+        padding: 10px 0px 25px 0px;
+        .img-container{
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: auto;
+            width: 50%;
+            background-color: $grey;
+            background-image: url("../img/services.png");
+            background-size: cover;
+            background-position: top right 65%;
+        }
+        .last{
+            margin-bottom: 0px;
+        }
+    }
+
+    .industry{
+        .industry-card{
+            min-height: 890px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .welcome{
+        .section-title{
+            padding-top: 57px;
+        }
+    }
+
+    .what-we-do{
+        .what-flex-parent{
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+    }
+
+    .industry{
+        .industry-card{
+            min-height: 860px;
+        }
+    }
+}
